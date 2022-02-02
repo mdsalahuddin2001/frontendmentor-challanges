@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<!-- displays site properly based on user's device -->
+
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="./images/favicon-32x32.png"
+		/>
+		<!-- Leaflet CSS -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+			integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+			crossorigin=""
+		/>
+		<!-- Make sure you put this AFTER Leaflet's CSS -->
+		<script
+			src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+			integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+			crossorigin=""
+		></script>
+		<link rel="stylesheet" href="./style.css" />
+		<title>Frontend Mentor | IP Address Tracker</title>
+
+		<!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+		<style>
+			.attribution {
+				font-size: 16px;
+				text-align: center;
+			}
+			.attribution a {
+				color: rgba(36, 169, 247, 0.856);
+				text-decoration: none;
+			}
+			.love {
+				color: red;
+				font-size: 20px;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<div class="container">
+				<h1>IP Address Tracker</h1>
+				<form class="search-box">
+					<input
+						type="text"
+						placeholder="Search for any IP address or domain"
+						class="search"
+						id="input-value"
+					/>
+					<button type="submit" class="search-btn">
+						<img src="./images/icon-arrow.svg" alt="arrow-icon" />
+					</button>
+				</form>
+				<div class="result-container">
+					<div class="result-item ip-address">
+						<h3>IP Address</h3>
+						<p id="ip-address">--</p>
+					</div>
+					<div class="result-item location">
+						<h3>Location</h3>
+						<p id="location">--</p>
+					</div>
+					<div class="result-item timezone">
+						<h3>Timezone</h3>
+						<p id="timezone">--</p>
+					</div>
+					<div class="result-item isp">
+						<h3>ISP</h3>
+						<p id="isp">--</p>
+					</div>
+				</div>
+			</div>
+		</header>
+		<div id="map"></div>
+		<div class="attribution">
+			Challenge by
+			<a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+				>Frontend Mentor</a
+			>. Coded with <span class="love">&hearts;</span> by
+			<a href="#">MD Salahuddin</a>.
+		</div>
+		<script src="./js/app.js"></script>
+	</body>
+</html>

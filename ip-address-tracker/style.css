@@ -1,0 +1,131 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+button:focus,
+input:focus {
+  outline: 0;
+}
+::placeholder {
+  /* Chrome, Firefox, Opera, Safari 10.1+ */
+  color: hsl(0, 0%, 59%);
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: hsl(0, 0%, 59%);
+}
+
+::-ms-input-placeholder {
+  /* Microsoft Edge */
+  color: hsl(0, 0%, 59%);
+}
+body {
+  font-family: "Rubik", sans-serif;
+}
+header {
+  background: url("./images/pattern-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+h1 {
+  text-align: center;
+  color: #fff;
+  padding: 30px 0;
+  font-weight: 500;
+}
+.search-box {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+}
+.search-box .search {
+  height: 55px;
+  border: 0;
+  padding: 14px 30px;
+  width: calc(100% - 60px);
+  border-radius: 10px 0px 0px 10px;
+  font-size: 18px;
+}
+.search-box .search-btn {
+  width: 60px;
+  border: 0;
+  background: #000;
+  color: #fff;
+  border-radius: 0px 10px 10px 0px;
+  cursor: pointer;
+}
+.result-container {
+  background: #fff;
+  display: flex;
+  border-radius: 20px;
+  transform: translate(0%, 50%);
+  box-shadow: 0 14px 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 100;
+}
+.result-container .result-item {
+  width: 25%;
+  padding-left: 30px;
+  padding-right: 10px;
+  margin: 30px 0;
+}
+.result-container .result-item:not(:last-child) {
+  border-right: 1px solid hsl(0, 0%, 90%);
+}
+.result-item h3 {
+  color: hsl(0, 0%, 59%);
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.result-item p {
+  font-size: 26px;
+  font-weight: 500;
+  color: hsl(0, 0%, 25%);
+  word-break: break-word;
+}
+@media screen and (max-width: 992px) {
+  .result-item p {
+    font-size: 24px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .result-container {
+    flex-direction: column;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-top: -160px;
+  }
+  .result-item h3 {
+    margin-bottom: 10px;
+  }
+  .result-item p {
+    font-size: 20px;
+  }
+  .result-container .result-item {
+    width: 100%;
+    text-align: center;
+    margin: 15px 0;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
+
+#map {
+  width: 100%;
+  height: 65vh;
+  background: #efefef;
+  position: relative;
+  z-index: 99;
+}
